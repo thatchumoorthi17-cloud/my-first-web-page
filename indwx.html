@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vetrimaalai Matrimony</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #7b1e3a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 5px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #4d1226;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Home */
+        .home {
+            text-align: center;
+            padding: 70px 20px;
+            background-color: #ead7dc;
+        }
+
+        .home h2 {
+            font-size: 38px;
+            color: #7b1e3a;
+        }
+
+        .home p {
+            font-size: 20px;
+            margin: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #7b1e3a;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        /* Search */
+        .search {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .search h2 {
+            color: #7b1e3a;
+            margin-bottom: 25px;
+        }
+
+        .search-box {
+            background-color: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px #ccc;
+        }
+
+        select,
+        input {
+            padding: 12px;
+            margin: 8px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #7b1e3a;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4d1226;
+        }
+
+        /* About */
+        .about {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #7b1e3a;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #ead7dc;
+        }
+
+        .contact h2 {
+            color: #7b1e3a;
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            margin: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #4d1226;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>💍 Vetrimaalai Matrimony</h1>
+        <p>Find Your Perfect Life Partner</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#search">Search</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <h2>Welcome to Vetrimaalai Matrimony</h2>
+
+        <p>
+            Find meaningful connections and begin your journey
+            towards a happy married life.
+        </p>
+
+        <a href="#search" class="button">Search Profiles</a>
+    </section>
+
+    <!-- Search -->
+    <section class="search" id="search">
+
+        <h2>🔍 Search Matrimony Profiles</h2>
+
+        <div class="search-box">
+
+            <select id="gender">
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+
+            <select id="age">
+                <option value="">Select Age</option>
+                <option>18 - 25</option>
+                <option>26 - 30</option>
+                <option>31 - 35</option>
+                <option>36 - 40</option>
+            </select>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Enter Location"
+            >
+
+            <br>
+
+            <button onclick="searchProfile()">
+                Search
+            </button>
+
+            <p id="searchResult"></p>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            Vetrimaalai Matrimony is a matrimonial platform
+            created to help people find suitable life partners.
+            Our aim is to make the profile search process
+            simple and convenient.
+        </p>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2>📞 Contact Us</h2>
+
+        <p>📱 Phone: +91 XXXXX XXXXX</p>
+        <p>📧 Email: example@email.com</p>
+        <p>📍 Location: Tamil Nadu, India</p>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Vetrimaalai Matrimony. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        function searchProfile() {
+
+            let gender = document.getElementById("gender").value;
+            let age = document.getElementById("age").value;
+            let location = document.getElementById("location").value;
+
+            if (gender === "" || age === "" || location === "") {
+
+                document.getElementById("searchResult").innerHTML =
+                    "Please fill all the search details.";
+
+            } else {
+
+                document.getElementById("searchResult").innerHTML =
+                    "Searching for profiles...";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
